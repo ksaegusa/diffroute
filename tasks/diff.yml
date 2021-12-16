@@ -1,0 +1,16 @@
+---
+- name: import pre_task
+  import_tasks: pre_task.yml
+
+- name: route diff (diff)
+  ansible.utils.fact_diff:
+    before: "{{ parser_before_ip_route.parsed \
+                             | sort_ip_filter \
+                             | pop_uptime() }}"
+    after: "{{ parser_after_ip_route.parsed \
+                             | sort_ip_filter \
+                             | pop_uptime() }}"
+  register: res_diff
+
+- name: import pre_task
+  import_tasks: post_task.yml

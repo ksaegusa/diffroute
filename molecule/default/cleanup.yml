@@ -1,0 +1,17 @@
+---
+# This is an example playbook to execute Ansible tests.
+- name: Cleanup
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: delete file
+      file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - "{{ playbook_dir }}/test1.txt"
+        - "{{ playbook_dir }}/test2.txt"
+        - "{{ playbook_dir }}/test3.txt"
+        - "{{ playbook_dir }}/test4.txt"
+        - "{{ playbook_dir }}/test5.txt"
+        - "{{ playbook_dir }}/test6.txt"

@@ -1,0 +1,12 @@
+# Result
+{% if res_diff.diff_lines|length != 0 %}
+{% for i in res_diff.diff_lines %}
+{%  if i | regex_replace('^\+\+\+.*$', '') | regex_replace('^---.*$', '')| regex_replace('^@@.*$', '') | length != 0 %}
+{%  if (i | regex_search('^\+.*$')) or (i | regex_search('^-.*$')) %}
+  {{ i }}
+{% endif %}
+{% endif %}
+{%- endfor %}
+{% else %}
+  Not Difference
+{%- endif %}

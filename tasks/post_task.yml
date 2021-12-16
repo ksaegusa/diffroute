@@ -1,0 +1,7 @@
+---
+- name: create result file
+  ansible.builtin.template:
+    src: result_report_base.j2
+    dest: "{{ dest }}"
+    force: true
+    mode: "755"

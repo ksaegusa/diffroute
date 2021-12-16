@@ -1,0 +1,3 @@
+---
+dest: "{{ playbook_dir }}/\
+       routediff_result_{{ now(False, '%Y%m%d_%H%M%S') }}.txt"

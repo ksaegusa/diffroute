@@ -1,0 +1,19 @@
+---
+# This is an example playbook to execute Ansible tests.
+- name: Verify
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Assert Result
+      assert:
+        that:
+          - lookup('file', playbook_dir+'/test1.txt')
+            == lookup('file','tests/test1_result.txt')
+          - lookup('file', playbook_dir+'/test2.txt')
+            == lookup('file','tests/test2_result.txt')
+          - lookup('file', playbook_dir+'/test3.txt')
+            == lookup('file','tests/test3_result.txt')
+          - lookup('file', playbook_dir+'/test4.txt')
+            == lookup('file','tests/test4_result.txt')
+          - lookup('file', playbook_dir+'/test5.txt')
+            == lookup('file','tests/test5_result.txt')

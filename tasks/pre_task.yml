@@ -1,0 +1,23 @@
+---
+- name: assert vars
+  assert:
+    that:
+      - before_ip_route is defined
+      - after_ip_route is defined
+    quiet: true
+
+- name: parse before_ip_route
+  ansible.utils.cli_parse:
+    text: "{{ before_ip_route }}"
+    parser:
+      name: ansible.utils.textfsm
+      template_path: "{{ role_path }}/templates/ios_show_ip_route.textfsm"
+  register: parser_before_ip_route
+
+- name: parse after_ip_route
+  ansible.utils.cli_parse:
+    text: "{{ after_ip_route }}"
+    parser:
+      name: ansible.utils.textfsm
+      template_path: "{{ role_path }}/templates/ios_show_ip_route.textfsm"
+  register: parser_after_ip_route

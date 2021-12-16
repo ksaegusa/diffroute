@@ -1,0 +1,2 @@
+# Result
+  +{'PROTOCOL': 'D', 'TYPE': '', 'NETWORK': '10.0.4.0', 'MASK': '26', 'DISTANCE': '90', 'METRIC': '2297856', 'NEXTHOP_IP': '10.0.1.2', 'NEXTHOP_IF': 'Serial0/0'}

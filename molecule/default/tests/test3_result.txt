@@ -1,0 +1,12 @@
+# Result
+  -{'PROTOCOL': 'O', 'TYPE': 'E2', 'NETWORK': '10.130.0.0', 'MASK': '', 'DISTANCE': '160', 'METRIC': '5', 'NEXTHOP_IP': '10.119.254.7', 'NEXTHOP_IF': 'Ethernet2'}
+  +{'PROTOCOL': 'O', 'TYPE': 'E2', 'NETWORK': '10.130.0.0', 'MASK': '', 'DISTANCE': '160', 'METRIC': '5', 'NEXTHOP_IP': '10.119.254.6', 'NEXTHOP_IF': 'Ethernet2'}
+  +{'PROTOCOL': 'E', 'TYPE': '', 'NETWORK': '10.141.0.0', 'MASK': '', 'DISTANCE': '200', 'METRIC': '129', 'NEXTHOP_IP': '10.119.254.240', 'NEXTHOP_IF': 'Ethernet2'}
+  -{'PROTOCOL': 'E', 'TYPE': '', 'NETWORK': '172.30.0.0', 'MASK': '', 'DISTANCE': '200', 'METRIC': '128', 'NEXTHOP_IP': '10.119.254.243', 'NEXTHOP_IF': 'Ethernet2'}
+  -{'PROTOCOL': 'E', 'TYPE': '', 'NETWORK': '172.30.1.0', 'MASK': '', 'DISTANCE': '200', 'METRIC': '128', 'NEXTHOP_IP': '10.119.254.243', 'NEXTHOP_IF': 'Ethernet2'}
+  -{'PROTOCOL': 'E', 'TYPE': '', 'NETWORK': '172.30.2.0', 'MASK': '', 'DISTANCE': '200', 'METRIC': '128', 'NEXTHOP_IP': '10.119.254.243', 'NEXTHOP_IF': 'Ethernet2'}
+  +{'PROTOCOL': 'E', 'TYPE': '', 'NETWORK': '172.30.0.0', 'MASK': '', 'DISTANCE': '200', 'METRIC': '128', 'NEXTHOP_IP': '10.119.254.244', 'NEXTHOP_IF': 'Ethernet2'}
+  -{'PROTOCOL': 'O', 'TYPE': 'E2', 'NETWORK': '172.70.132.0', 'MASK': '', 'DISTANCE': '160', 'METRIC': '5', 'NEXTHOP_IP': '10.119.254.7', 'NEXTHOP_IF': 'Ethernet2'}
+  +{'PROTOCOL': 'O', 'TYPE': 'E2', 'NETWORK': '172.70.132.0', 'MASK': '', 'DISTANCE': '160', 'METRIC': '5', 'NEXTHOP_IP': '10.119.254.6', 'NEXTHOP_IF': 'Ethernet2'}
+  -{'PROTOCOL': 'O', 'TYPE': 'E2', 'NETWORK': '172.150.0.0', 'MASK': '', 'DISTANCE': '160', 'METRIC': '5', 'NEXTHOP_IP': '10.119.254.7', 'NEXTHOP_IF': 'Ethernet2'}
+  +{'PROTOCOL': 'O', 'TYPE': 'E2', 'NETWORK': '172.150.0.0', 'MASK': '', 'DISTANCE': '160', 'METRIC': '5', 'NEXTHOP_IP': '10.119.254.6', 'NEXTHOP_IF': 'Ethernet2'}

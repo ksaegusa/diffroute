@@ -1,0 +1,82 @@
+---
+- name: Converge
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: "Include routediff"
+      include_role:
+        name: "routediff"
+        tasks_from: diff.yml
+      vars:
+        dest: "test1.txt"
+        before_ip_route: "{{ lookup('file', \
+                             playbook_dir \
+                             + '/tests/before_ip_route.txt') }}"
+        after_ip_route: "{{ lookup('file', \
+                            playbook_dir \
+                            + '/tests/after_ip_route.txt') }}"
+
+    - name: "Include routediff"
+      include_role:
+        name: "routediff"
+        tasks_from: diff.yml
+      vars:
+        dest: "test2.txt"
+        after_ip_route: "{{ lookup('file', \
+                            playbook_dir \
+                            + '/tests/before_ip_route.txt') }}"
+        before_ip_route: "{{ lookup('file', \
+                            playbook_dir \
+                            + '/tests/after_ip_route.txt') }}"
+
+    - name: "Include routediff"
+      include_role:
+        name: "routediff"
+        tasks_from: sortdiff.yml
+      vars:
+        dest: "test3.txt"
+        before_ip_route: "{{ lookup('file', \
+                             playbook_dir \
+                             + '/tests/before_ip_route_simple.txt') }}"
+        after_ip_route: "{{ lookup('file', \
+                            playbook_dir \
+                            + '/tests/after_ip_route_simple.txt') }}"
+
+    - name: "Include routediff"
+      include_role:
+        name: "routediff"
+        tasks_from: sortdiff.yml
+      vars:
+        dest: "test4.txt"
+        after_ip_route: "{{ lookup('file', \
+                            playbook_dir \
+                            + '/tests/before_ip_route_simple.txt') }}"
+        before_ip_route: "{{ lookup('file', \
+                             playbook_dir \
+                               + '/tests/after_ip_route_simple.txt') }}"
+
+    - name: "Include routediff"
+      include_role:
+        name: "routediff"
+        tasks_from: diff.yml
+      vars:
+        dest: "test5.txt"
+        after_ip_route: "{{ lookup('file', \
+                            playbook_dir \
+                            + '/tests/before_ip_route_simple.txt') }}"
+        before_ip_route: "{{ lookup('file', \
+                             playbook_dir \
+                               + '/tests/before_ip_route_simple.txt') }}"
+
+    - name: "Include routediff"
+      include_role:
+        name: "routediff"
+        tasks_from: sortdiff.yml
+      vars:
+        dest: "test6.txt"
+        after_ip_route: "{{ lookup('file', \
+                            playbook_dir \
+                            + '/tests/before_ip_route_simple.txt') }}"
+        before_ip_route: "{{ lookup('file', \
+                             playbook_dir \
+                               + '/tests/before_ip_route_simple.txt') }}"
